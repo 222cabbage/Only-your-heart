@@ -1,0 +1,261 @@
+header {
+    height: 700px;
+    background-color: black;
+    background-image: url(../all-source-material/images/banner1.jpg.png);
+}
+.xingdong {
+    position: absolute;
+    top: 440px;
+    left: 1275px;
+    width: 200px;
+    height: 50px;
+    border: 2px white solid;
+}
+.xingdong:hover {
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.3s linear;
+}
+.xingdong:hover a {
+    color: red;
+}
+.xingdong a {
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    color: white;   
+    text-align: center;
+    line-height: 45px;
+    text-decoration: none;
+    font-weight: 600;
+}
+nav {
+    height: 110px;
+    background-color: rgba(0, 0, 0, 0.371);
+}
+article {
+    position: relative;
+    width: 1920px;
+    height: 2000px;
+    margin: auto;
+}
+/* 装标题的盒子 */
+.h1 {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 680px;
+    height: 150px;
+    text-align: center;
+}
+/* 标题盒子 */
+.h1 h1 {
+    letter-spacing: 4px;
+    font-size: 40px;
+}
+.h1 p {
+    letter-spacing: 4px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+/* 分类盒子 */
+.fenlei {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 240px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1210px;
+    height: 460px;
+}
+/* 亲情 */
+.qinqing {
+    float: left;
+    width: 360px;
+    height: 450px;
+    background-image: url(../all-source-material/images/qinrendingzhi.jpg.png)
+}
+.qinglv {
+    background-image: url(../all-source-material/images/qinglvdingzhi.jpg.png);
+}
+.pengyou {
+    background-image: url(../all-source-material/images/pengyoudingzhi.jpg.png);
+}
+/* 亲情悬停 */
+.qinqing:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 8px 40px rgba(10,16,20,.24),0 0 40px rgba(10,16,20,.12);
+    text-decoration: none;
+    background-color: rgb(255, 192, 203，1);
+    transition: all 0.4s ease-in-out;
+}
+/* 立即选购 */
+.qinqing:hover .ready {
+    transition: all 0.3s linear;
+    background-color: rgb(255, 255, 255);
+    color: rgb(250, 138, 138);
+}
+.ready {
+    margin-top: 370px;
+    width: 360px;
+    height: 60px;
+    background-color: rgba(255, 192, 203, 0.528);
+    text-align: center;
+    font-size: 25px;
+    line-height: 60px;
+    color: white;
+}
+/* 往期得意作品文字盒子 */
+.works {
+    position: absolute;
+    top: 800px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 680px;
+    height: 150px;
+    text-align: center;
+}
+.works h1 {
+    letter-spacing: 4px;
+    font-size: 40px;
+}
+.works p {
+    letter-spacing: 4px;
+    margin-top: 15px;
+    font-size: 20px;
+}
+/* 往期 */
+.yestday {
+    position: absolute;
+    top: 950px;
+    left:980px;
+    transform: translateX(-50%);
+    width: 1300px;
+    height: 700px;
+}
+.yest {
+    float: left;
+    width: 270px;
+    height: 300px;
+    background-color: white;
+}
+.jieshao {
+    background-color: rgb(255, 255, 255);
+    transform: translateY(-30px);
+    text-align: center;
+    font-size: 20px;
+}
+.jieshao p {
+    width: 270px;
+    height: 40px;
+    letter-spacing: 4px;
+    color: rgb(238, 93, 93);
+    font-weight: 600;
+    line-height: 35px;
+}
+/* .yestday a:nth-child(1) .jieshao {
+    transform: translateY(-40px);
+} */
+/* a链接盒子 */
+.yestday a {
+    margin-top: 30px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    display: inline-block;
+    text-decoration: none;
+}
+/* 得意作品盒子 */
+.yestday a:hover {
+    /* transform: translateY(-2px); */
+    box-shadow: 0 8px 40px rgba(10,16,20,.24),0 0 40px rgba(10,16,20,.12);
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+} 
+/* 最底下广告语的盒子 */
+.guanggaoyu {
+    position: absolute;
+    top: 1720px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 900px;
+    height: 100px;
+    text-align: center;
+}
+.guanggaoyu h1 {
+    letter-spacing: 4px;
+    font-size: 30px;
+}
+.guanggaoyu p {
+    letter-spacing: 4px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+/* 更多功能盒子 */
+.more {
+    position: absolute;
+    top: 1850px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1920px;
+    height: 180px;
+    background-color: rgb(245, 163, 164);
+}
+/* 更多里面的盒子 */
+.more .more-box {
+    position: absolute;
+    top: 80px;
+    left: 200px;
+    width: 200px;
+    height: 60px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 55px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    font-weight: 550;
+    border: 2px black solid;
+    border-radius: 45px;
+
+}
+.more a:nth-of-type(1) .more-box {
+    margin-left: 110px;
+}
+.more a:nth-of-type(2) .more-box {
+    margin-left: 464px;
+}  
+.more a:nth-of-type(3) .more-box {
+    margin-left: 820px;
+}  
+.more a:nth-of-type(4) .more-box {
+    margin-left: 1175px;
+}  
+.more .more-box:hover {
+    transform: translateX(10px);
+    transition: all 0.4s ease-in-out;
+    background-color: rgb(167, 195, 238)
+}
+.more h1 {
+    margin-top: 20px;
+    margin-left: 308px;
+    font-size: 25px;
+    font-weight: 550;
+}
+/* 更多a链接 */
+/* 小图标 */
+.xiaotubiao {
+    float: right;
+    width: 45px;
+    height: 56px;
+    margin-right: 20px;
+}
+.xiaotubiao img {
+    width: 100%;
+}
+/* 尾部部分 */
+footer {
+    top: 50px;
+}

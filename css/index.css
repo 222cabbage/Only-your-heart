@@ -1,0 +1,858 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* 列表样式 */
+li {
+    list-style: none;
+}
+body {
+    overflow-x: hidden;
+}
+/* 头部 */
+header {
+    position: relative;
+    width:1920px;
+    height: 840px;
+    margin: auto;
+}
+.png {
+    z-index: 9;
+    position: absolute;
+    top: 400px;
+    left: 9%;
+    width: 550px;
+    height: 60px;
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: all 1s 5s ease-in-out;
+}
+.png img {
+    width: 100%;
+}
+/* 导航栏 */
+nav {
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    width: 1920px;
+    height: 65px;
+  
+}
+
+/* 导航栏logo */
+.nav-logo-box {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    width: 200px;
+    height: 60px;
+}
+
+.nav-logo-box img {
+    width: 100%;
+}
+/* 搜索框 */
+#search input[type="text"]{
+    position: absolute;
+    background: url('') no-repeat 15px 9px #444;
+    border: 0 none;
+    font: normal 12px "microsoft yahei",Arial,sans-serif;
+    color: #fff;
+    width: 150px;
+    margin-left: 350px;
+    padding: 10px 15px 10px 35px;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    transition: all 0.8s ease 0s;
+  }
+
+  /* 定义focus下的CSS，这里定义输入框宽度变化 */
+  #search input[type="text"]:focus{
+    background: url('') no-repeat 12px 9px #EFEFEF;
+    color:#6a6f75;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    width: 200px;
+  }
+/* 导航栏视频 */
+.banner-video {
+    position: absolute;
+    width: 1920px;
+    height: 840px;
+}
+.banner-video  video {
+    width: 100%;
+
+}
+
+/* 第一个返回的小格子 */
+/* 返回动画 */
+@keyframes return-bottom {
+    0% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes return-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      opacity: 1;
+    }
+  }
+  
+/* header .banner-video .return-1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    bottom:20px;
+    width: 50px;
+    height: 50px;
+    animation: return-bottom 1.5s infinite;
+}
+header .banner-video .return-1  img {
+    width: 100%;
+} */
+/* 外部列表盒子 */
+.out-list {
+    width: 1900px;
+    height: 55px;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+/* 外部盒子里面的li */
+.out-list li {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 55px;
+    margin-right: 30px;
+   
+}
+/* 使外部第三个和第四个li右浮动 */
+/* 导航栏外部盒子的第一个li下移300px*/
+.y-300 {
+    transform: translateY(300px);
+    background-color: transparent;
+}
+.out-list li:nth-child(2), .out-list li:nth-child(3), .out-list li:nth-child(4) {
+    margin-right: 0%;
+    margin-left: -130px;
+    float: right;
+}
+/* 导航栏文字 */
+.out-list li a {
+    display: inline-block;
+    width: 110px;
+    margin-left:100px;
+    height: 80px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 80px;
+    position: absolute;
+    z-index: 1;
+}
+/* 内部列表盒子 */
+.in-list {
+    width: 300px;
+    height: 100px;
+}
+.in-list a {
+    width: 100px;
+}
+/* 下拉内部列表动画过渡 */
+.in-box {
+    opacity: 0;
+    width: 300px;
+    height: 170px;
+    transform: translateY(-200px);
+}
+.out-list li:hover .in-box {
+    opacity: 1;
+    transform: translateY(70px);
+    transition: all 0.5s ease-out;
+}
+/* 经过导航栏外部列表的li ，里面的a */
+.out-list li:hover .cu {
+    background-color: #f7cbcd;
+    color: #ffffff;
+    font-weight: 600;
+    border-bottom: 6px #E99599 solid;
+}
+/* logo hover边框无 */
+/* 内部列表下拉下边框 */
+.out-list li:hover .in-box {
+    border-radius: 20px;
+}
+.out-list li:hover .in-box .in-list li a {
+    color: black;
+    border-bottom: 1px solid rgb(223, 223, 223) ;
+    background-color: white;
+    font-size: 14px;
+}
+/* 页面中心内容 */
+article {
+    position: relative;
+    width: 1920px;
+    height: 2800px;
+    margin: auto;
+}
+/* 选择服务盒子 */
+.select-service { 
+    position: relative;
+    width: 1920px;
+    height: 1000px;
+    background-image: url(../all-source-material/images/fixed3.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+.select-service .returen-2 {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    bottom: 10px;
+    width: 100px;
+    height: 50px;
+    border-radius: 20px;
+    border: 2px black solid;
+}
+/* 唯你定制标题 */
+.select-service h1 {
+    font-size: 60px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 200px;
+    letter-spacing: 20px;
+}
+/* 服务盒子 */
+.douyou {
+    position: absolute;
+    width: 400px;
+    height: 550px;
+}
+/* 盒子上移阴影 */
+.douyou:hover {
+    transition: all 0.5s ease-out;
+}
+.douyou .service-img img { 
+}
+.douyou:hover .service-img img {
+    opacity: 1;
+    transition: all 0.5s ease-out;
+}
+.select-service a {
+    display: inline-block;
+    width: 100%;  
+}
+/* 内部变色盒子 */
+.service-img .in {
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    visibility: hidden;
+    opacity: 0;
+    width: 400px;
+    height: 450px;
+    background-color: red;
+    transform:translateY(-312px);
+}
+.service-img:hover .in {
+    visibility: visible;
+    transition: all 0.4s ease-out;
+}
+/* 内部文字盒子 */
+.in .in-text {
+    width:200px;
+    height: 100px;
+    /* background-color: red; */
+    margin-left: 100px;
+    transform:translateY(200px);
+    color: white;
+}
+/* 服务外部的盒子 */
+.service {
+    margin-left: 200px;
+}
+.service-2 {
+    margin-left: 760px;
+}
+.service-3 {
+    margin-left: 1320px;
+}
+.service-img {
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    width: 400px;
+    height: 550px
+}
+.douyou:hover .choose{
+    transition: all 0.3s linear;
+    box-shadow: 0 20px 20px rgba(10, 16, 20, .24), 0 0 8px rgba(10, 16, 20, .12);
+}
+.choose {
+    width: 400px;
+    height: 150px;
+    transform: translateY(-145px);
+    background-color: white;
+}
+.choose a {
+    display: inline-block;
+    width: 400px;
+    color:black;
+    text-align: left;
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 25px;
+    font-weight: 550;
+    margin-left: 50px;
+
+}
+.choose .yuyan {
+    display: inline-block;
+    width: 400px;
+    text-align: left;
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 18px;
+    font-weight: 550;
+    margin-left: 50px;
+    margin-top: -10px;
+    color: rgb(231, 86, 76);
+}
+.choose .yuyan2 {
+    color: rgb(243, 149, 165);
+}
+.choose .yuyan3 {
+    color: rgb(104, 190, 247);
+}
+.choose .go {
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    border: 2px rgb(245, 101, 17) solid;
+    border-radius: 20px;
+    margin-left: px;
+    transform: translateY(-5px);
+    text-align: center;
+    font-size: 20px;
+    color: rgb(250, 120, 34);   
+    line-height: 35px;
+}
+.choose .go2 {
+    border: 2px rgb(243, 149, 165) solid;
+    color: rgb(243, 149, 165);
+}
+.choose .go3 {
+    border: 2px rgb(104, 190, 247) solid;
+    color: rgb(104, 190, 247) ;
+}
+.white {
+    position: absolute;
+    top: 596px;
+    width: 1920px;
+    height: 179px;
+    background-color: white;
+    box-shadow: 0px 10px 30px rgba(10, 16, 20, .24), 0 0 8px rgba(10, 16, 20, .12);
+}
+/* 服务盒子上移动画 */
+/* 服务盒子内部文字的动画 */
+.douyou:hover .choose a {
+    /* animation: text 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; */
+}
+@keyframes text {
+    0% {
+      /* -webkit-transform: translateY(0); */
+              transform: translateY(0);
+      /* -webkit-transform-origin: 50% 50%; */
+              transform-origin: 50% 50%;
+      text-shadow: none;
+    }
+    100% {
+      /* -webkit-transform: translateY(-15px); */
+              transform: translateY(-15px);
+      /* -webkit-transform-origin: 50% 50%; */
+              transform-origin: 50% 50%;
+      text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
+  
+  
+/* .return-2 {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    animation: return-bottom 1.5s infinite;
+} */
+/* .return-2  img {
+    width: 100%;
+} */
+/* 幸福树 */
+.tree {
+    position: relative;
+    width: 1920px;
+    height: 900px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 50px 50px rgba(10,16,20,.24),0 0 100px rgba(116, 130, 139, 0.12);
+}
+.fix-2 {
+    position: absolute;
+    top: 900px;
+    width: 100%;
+    height: 900px;
+    background-image: url(../all-source-material/images/fixed4.jpg.png);
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+/* 装树照片的盒子 */
+.tree-box {
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    width: 900px;
+    height: 700px;
+}
+/* 溢出隐藏 */
+.overflow {
+    overflow:hidden;
+}
+.img-1 {
+    float: left;
+    width: 500px;
+    height: 700px;
+    background-color: pink;
+}
+.img-2 {
+    float: right;
+    width: 400px;
+    height: 350px;
+    background-color: pink;
+}
+.img-3 {
+    float: right;
+    width: 400px;
+    height: 350px;
+    background-color: pink;
+}
+.img-1 img, .img-2 img, .img-3 img {
+    width: 100%;
+    opacity: 0.7;
+}
+/* 碰到盒子图片放大变清晰 */
+.scale:hover img {
+    opacity: 1;
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
+}
+/* 隐藏的元素出现 */
+.trans {
+    opacity: 0.5;
+    height: 120px;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+    font-weight: 550;
+    letter-spacing: 6px;
+    background-color: rgba(0, 0, 0, 0.446);
+}
+.img-1 .trans-y {
+    width: 500px;
+    transform: translateY(389px);
+}
+.img-2 .trans-y {
+    width: 400px;
+    transform: translateY(100px);
+}
+.img-3 .trans-y {
+    width: 400px;
+    transform: translateY(100px);
+}
+.img-1:hover .trans-y {
+    opacity: 1;
+    transform: translateY(-85px);
+    transition: all 0.3s ease-out;
+}
+.img-2:hover .trans-y {
+    opacity: 1;
+    transform: translateY(-85px);
+    transition: all 0.3s ease-out;
+}
+.img-3:hover .trans-y {
+    opacity: 1;
+    transform: translateY(-85px);
+    transition: all 0.3s ease-out;
+}
+
+/* 介绍树的盒子 */
+.introduce-tree {
+    position: absolute;
+    top: 100px;
+    right:250px;
+    width: 500px;
+    height: 700px;
+} 
+.introduce-tree a {
+    text-decoration: none;
+} 
+/* 滑动共有属性 */
+.douhave {
+    width: 500px;
+    height: 130px;
+    transform: translateX(20px);
+    opacity: 0.6;
+}
+/* 三个盒子的顶部距离 */
+.top {
+    margin-top: 45px;
+}
+.douhave h1 {
+    letter-spacing: 5px;
+    height: 170px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 30px;
+}
+.douhave p {
+    line-height: 25px;
+    letter-spacing: 5px;
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    transform: translateY(-90px);
+    margin-left: 100px;
+}
+.hover:hover {
+    transform: translateX(-20px);
+    opacity: 1;
+    transition: all 0.4s ease-out;
+    border-right: 8px #E99599 solid;
+}
+.introduce-tree-box1 {
+    margin-top: 100px;
+}
+.introduce-tree-box2 {
+    margin-top: 40px;
+}
+.introduce-tree-box3 {
+    margin-top: 40px;
+}
+/* .return-3 {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    animation: return-bottom 1.5s infinite;
+}
+.return-3 img {
+    width: 100%;
+} */
+/* 关于我们盒子 */
+.about-us {
+    position: relative;
+    top: px;
+    width: 1920px;
+    height: 930px;
+}
+.about-us h1 {
+    position: absolute;
+    width: 70px;
+    height: 270px;
+    top: 170px;
+    left: 250px;
+    font-size:  50px;
+    text-align: right;
+    border-left: 5px rgb(255, 255, 255) dotted;
+    color: white;
+}
+/* 我们大盒子 */
+.us-box {
+    position: absolute;
+    top: 150px;
+    left: 600px;
+    width: 400px;
+    height: 500px;
+    background-color: yellow;
+}
+/* 装我们相片介绍的盒子 */
+.us-box-1 {
+    position: relative;
+    top: 20px;
+    margin-left: -230px;
+}
+ .us-box-2 {
+    position: relative;
+    top: -1px;
+    margin-left: 220px;
+}
+.us-box-3 {
+    position: relative;
+    top: -21px;
+    margin-left: 670px;
+}
+/* 装我们相片的盒子 */
+.us-box-img img {
+    width: 100%;
+}
+/* 装图片的盒子 */
+.us-box-img {
+    position: absolute;
+    z-index: 1;
+}
+/* 装介绍的盒子 */
+.us-box-introduce {
+    position: absolute;
+    top: 300px;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(31, 45, 100);
+    line-height: 280px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 6px;
+}
+.us-box:hover .us-box-img {
+    transition: all 0.5s ease-out;
+    transform: translateY(-60px);
+}
+.us-box:hover .us-box-introduce {
+    transition: all 0.5s ease-out;
+    transform: translateY(60px);
+}
+.return-4 {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    bottom: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    animation: return-top 1.5s infinite;
+}
+.return-4 img {
+    width: 100%;
+}
+/* 尾部部分 */
+footer {
+    position: relative;
+    width: 1920px;
+    height: 500px;
+    margin: auto;; 
+}
+/* 尾部logo盒子 */
+.footer-box {
+    position: absolute;
+    top: 50px;
+    left: 222px;
+    width: 1480px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 50px rgba(10,16,20,.24),0 0 60px rgba(116, 130, 139, 0.12)
+}
+/* 装logo的盒子 */
+.logo-box {
+    float: left;
+    width: 580px;
+    height: 400px;
+}
+.logo-box-img {
+    margin-top: 140px;
+    margin-left: 25%;
+    width: 330px;
+    height: 115px;
+}
+.logo-box-img img {
+    width: 100%;
+}
+/* 右边的盒子 */
+.right-box {
+    float: right;
+    width: 875px;
+    height: 400px;
+}
+/* 版权信息盒子 */
+.copyright {
+    float: left;
+    width: 585px;
+    height: 380px;
+    
+    margin-top: 10px;
+}
+.copyright dl {
+    display: inline-block;
+    width: 200px;
+    height: 360px;
+    padding-top: 60px;
+}
+.copyright dl dd {
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.copyright dl dd a{
+    display: inline-block;
+    width: 150px;
+    border-bottom: 0.6px #ccc9c9 solid;
+    color:rgb(122, 122, 122);   
+
+    font-size: 20px;
+    font-weight: 530;
+    text-decoration: none;
+}
+/* 社交账号图标盒子 */
+.social {
+    float: right;
+    margin-top: 65px;
+    width: 380px;
+    height: 50px;
+}
+.social div {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+    /* overflow: hidden; */
+}
+.social div:nth-child(2), .social div:nth-child(3), .social div:nth-child(4) {
+    margin-left:px;
+}
+.social div img {
+    width: 100%;
+    opacity: 0.7;
+}
+.social div:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 0.3s ease-out;
+}
+/* 合作盒子 */
+.cooperation {
+    position: absolute;
+    left: 800px;
+    top: 140px;
+    width: 386px;
+    height: 50px;
+}
+.cooperation span {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+}
+/* 合作里面的a链接 */
+.cooperation a {
+    font-size: 15px;
+    color:rgb(122, 122, 122);  
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+}
+/* 合作链接里的第二个和第三个距离 */
+.cooperation span:nth-child(2), .cooperation span:nth-child(3) {
+    margin-left: 14px;
+}
+/* 都变大 */
+.footer-scale:hover {
+    transition: all 0.4s ease-out;
+    transform: scale(1.1);
+}
+/* 隐私协议 */
+.agreement {
+    position: absolute;
+    left: 800px;
+    top: 200px;
+    width: 387px;
+    height: 50px;
+}
+.agreement a {
+    color:rgb(122, 122, 122);
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+    line-height: 60px;
+}
+.agreement a span {
+    color:rgb(122, 122, 122);
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+}
+.agreement a span:nth-child(2) {
+}
+/* 备案信息 */
+.law {
+    position: absolute;
+    left: 800px;
+    top: 257px;
+    width: 387px;
+    height: 50px;
+    text-indent: 1em;
+    line-height: 60px;   
+    font-size: 13px;
+    color: rgb(122, 122, 122);
+    text-decoration: none;
+}
+/* 二维码盒子 */
+.QR-code {
+    float: right;
+    width: 290px;
+    height: 380px;
+    margin-top: 10px;
+}
+/* 装二维码的盒子 */
+.QR-code-img {
+    width: 190px;
+    height: 190px;
+    margin-left: 50px;
+    margin-top: 50px;
+    background-color: black;
+}
+.QR-code-img img {
+    width: 100%;
+}
+.QR-code h1 {
+    width: 230px;
+    height: 60px;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
+/* 小动画flash */
+.flash {
+    position: absolute;
+    left: 200px;
+    top: -205px;
+    width: 390px;
+    height: 390px;
+}
+.flash img {
+    width: 100%;
+}

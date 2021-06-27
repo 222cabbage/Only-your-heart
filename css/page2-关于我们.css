@@ -1,0 +1,292 @@
+header {
+    height: 200px;
+    background-color: black;
+    background-image: url(../all-source-material/images/header-2.png);
+}
+article {
+    padding-top: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1400px;
+    width: 1720px;
+}
+/* 左边公司概况，设计师团队，创始人，合作企业 */
+.left-box {
+    /* position: absolute;
+    top: 40px;
+    left:10%; */
+    margin-left: 165px;
+    width: 290px;
+    height: 410px;
+}
+.left-box .left-box-in {
+    text-align: center;
+    width: 298px;
+    height: 100px;
+    /* background-color: rgba(237, 212, 212, 0.405); */
+    border-bottom: 2px black  dotted;
+    margin-bottom: 5px;
+}
+/* 悬停效果 */
+.left-box .left-box-in:hover {
+    box-shadow: 0 8px 40px rgba(10,16,20,.24),0 0 40px rgba(10,16,20,.12);
+    transform: translateX(3px);
+    transition: all 0.3s linear;
+}
+.left-box .left-box-in a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 23px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    transform: translateX(-40px);
+    margin: 50px;
+    white-space: nowrap;
+    
+}
+/* 装图片的小盒子 */
+.img {
+    float: left;
+    margin-left :30px;
+    margin-top: 30px;
+    width: 60px;
+    height: 60px;
+    /* background-color: black; */
+
+}
+.img img {
+    width: 100%;
+}
+/* 公司咨询 */
+.h1 {
+    position: absolute;
+    top:60px;
+    left: 30%;
+    width: 140  px;
+    height: 40px;
+    font-size: 25px;
+    border-bottom: 1px rgb(20, 21, 104) solid;
+}
+/* 资讯 */
+.zixun {
+    position: absolute;
+    top: 110px;
+    left: 30%;
+    width: 1030px;
+    height: 1200px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.in-box2 {
+   position: absolute;
+    z-index: 10;
+    top: 0px;
+    width: 1030px;
+    height: 190px;
+    overflow: hidden;
+}
+.in-box3 {
+    width: 2900px;
+    height: 190px;
+    animation: lunbo 20s infinite alternate;
+}
+.in-box3 section {
+    margin-right: 20px;
+}
+.in-box3:hover {
+    animation-play-state: paused;
+}
+.num img {
+    width: 100%;
+}
+.num1 {
+    float: left;
+    width: 300px;
+    height: 190px;
+    background-color:blue;
+}
+.num2 {
+    float: left;
+    width: 300px;
+    height: 190px;
+    background-color:rgb(228, 122, 122);
+}
+.num3 {
+    float: left;
+    width: 300px;
+    height: 190px;
+    background-color:rgb(85, 7, 7);
+}
+.num4 {
+    float: left;
+    width: 300px;
+    height: 190px;
+    background-color:rgb(5, 2, 10);
+}
+.num5 {
+    float: left;
+    width: 300px;
+    height: 190px;
+    background-color:rgb(62, 5, 155);
+}
+.num6 {
+    float: left;
+    width: 300px;
+    height: 190px;
+    background-color:rgb(94, 255, 0);
+}
+.num7 {
+    float: left;
+    width: 300px;
+    height: 190px;
+    background-color:rgb(118, 168, 89);
+}
+.num8 {
+    float: left;
+    width: 300px;
+    height: 190px;
+    background-color:rgb(32, 125, 212);
+}
+.num9 {
+    float: left;
+    width: 300px;
+    height: 190px;
+    background-color:black;
+}
+/* 轮播动画 */
+@keyframes lunbo {
+    0% {
+        transform: translateX(0px);    
+    }
+    100% {
+        transform: translateX(-1820px);    
+    }
+}
+/* 资讯里的东西 */
+/* 资讯第一个盒子 */
+.zixun-in {
+    position: absolute;
+    top: 220px;
+    width: 1030px;
+    height: 200px;
+    /* background-color: yellow; */
+    border-bottom: 3px rgb(221, 156, 156) dotted;
+
+}
+.zixun-in:hover {
+    transition: all 0.3s linear;
+    box-shadow: 0 8px 20px rgba(10,16,20,.24),0 0 20px rgba(10,16,20,.12);
+}
+
+.img-box {
+    float: left;
+    margin-top: 20px;
+    margin-left: 30px;
+    width: 300px;
+    height: 160px;
+    overflow: hidden;
+}
+.img-box  img {
+    width: 100%;
+}
+.text-introduce {
+    float: left;
+    margin-top: 40px;
+    margin-left: 30px;
+    height: 40px;
+    background-color: white;
+}
+.text-introduce a {
+    text-decoration: none;
+}
+.text-introduce a:hover {
+    text-decoration: underline;
+}
+.text-introduce a h1 {
+    font-size: 20px;
+    
+}
+.text-introduce a p {
+    width: 400px;
+    font-size: 13px;
+    margin-top: 16px;
+}
+.right-img {
+    position: absolute;
+    top:60px;
+    left: 900px;
+    width: 70px;
+    height: 70px;
+    /* background-color: black; */
+}
+.right-img img {
+    width: 100%;
+}
+.zixun-in-1 {
+    float: left;
+    margin-top: 40px;
+    /* margin-left: 20px; */
+    width: 100px;
+    height: 100px;
+    font-size: 25px;
+    font-weight: 700;
+    text-align: center;
+}
+.zixun-1 .zixun-in-1 {
+    font-size: 40px;
+    color: red;
+}
+.zixun-2 {
+    position: absolute;
+    top: 450px;
+    width: 1030px;
+    height: 200px;
+    font-size: 40px;
+}
+.zixun-2 .zixun-in-1 {
+    font-size: 30px;
+    color: rgb(245, 142, 124);
+}
+.zixun-3 {
+    position: absolute;
+    top: 680px;
+    width: 1030px;
+    height: 200px;
+}
+.zixun-3 .zixun-in-1 {
+    font-size: 30px;
+    color: pink;
+}
+.zixun-4 {
+    position: absolute;
+    top: 910px;
+    width: 1030px;
+    height: 200px;
+}
+.zixun-5 {
+    position: absolute;
+    top: 1140px;
+    width: 1030px;
+    height: 200px;
+}
+.zixun-6 {
+    position: absolute;
+    top: 1370px;
+    width: 1030px;
+    height: 200px;
+}
+.zixun-7 {
+    position: absolute;
+    top: 1600px;
+    width: 1030px;
+    height: 200px;
+
+}
+.zixun-8 {
+    position: absolute;
+    top: 1830px;
+    width: 1030px;
+    height: 200px;
+}

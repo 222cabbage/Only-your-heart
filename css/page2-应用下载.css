@@ -1,0 +1,103 @@
+header {
+    height: 1080px;
+    background: url(../all-source-material/images/jiarena.jpg)
+}
+a {
+    text-decoration: none;
+}
+/* 标题 */
+header h1 {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size:50px;
+    color: rgb(255, 255, 255);
+}
+header p {
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size:25px;
+    font-weight: 200;
+    color: rgb(255, 255, 255);
+}
+/* 下载盒子 */
+.download {
+    position: absolute; 
+    top: 420px;
+    left: 50%;
+    margin-left: -122px;
+    width: 245px;
+    height: 60px;
+    background-color: skyblue;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 60px;
+    color: 40px;
+    font-size: 20px;
+}
+/* 悬停变色 */
+.download:hover {
+    transition: all 0.25s linear;
+    background-color: rgb(155, 102, 224);
+}
+/* 下载盒子a链接 */
+.download a {
+    display: inline-block;
+    width: 245px;
+    height: 60px;
+    color: white;
+}
+/* 二维码图片 */
+.download-erweima {
+    position: absolute;
+    top: 525px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 250px;
+    border: 6px white solid;
+}
+.download-erweima img {
+    width: 100%;
+}
+.information {
+    position: absolute;
+    top: 540px;
+    left: 60%;
+    transform: translateX(-45px);
+    width: 250px;
+    height: 100px;
+   
+}
+.information img {
+    width: 100%;
+    transform: rotate(-20deg);
+    transform-origin: 0% 30%;
+    animation: rotate 2s ease-in-out infinite alternate;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(30deg);
+    }
+
+}
+/* 底部 */
+.footer {
+    position: absolute;
+    bottom: 0px;
+    width: 1920px;
+    height: 100px;
+}
+.footer .text {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+}

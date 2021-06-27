@@ -1,0 +1,385 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+/* 列表样式 */
+li {
+    list-style: none;
+}
+body {
+    overflow-x: hidden;
+}
+/* 头部 */
+header {
+    position: relative;
+    width:1920px;
+    height: 1000px;
+    margin: auto;
+    background-color: black;
+}
+/* 导航栏 */
+nav {
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    width: 1920px;
+    height: 65px;
+  
+}
+
+/* 导航栏logo */
+.nav-logo-box {
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    width: 200px;
+    height: 60px;
+}
+
+.nav-logo-box img {
+    width: 100%;
+}
+/* 搜索框 */
+#search input[type="text"]{
+    position: absolute;
+    background: url('') no-repeat 15px 9px #444;
+    border: 0 none;
+    font: normal 12px "microsoft yahei",Arial,sans-serif;
+    color: #fff;
+    width: 150px;
+    margin-left: 350px;
+    padding: 10px 15px 10px 35px;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    transition: all 0.8s ease 0s;
+  }
+
+  /* 定义focus下的CSS，这里定义输入框宽度变化 */
+  #search input[type="text"]:focus{
+    background: url('') no-repeat 12px 9px #EFEFEF;
+    color:#6a6f75;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.9) inset;
+    width: 200px;
+  }
+/* 导航栏视频 */
+.banner-video {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    background-color: red;
+}
+.banner-video  video {
+    width: 100%;
+
+}
+
+/* 第一个返回的小格子 */
+/* 返回动画 */
+@keyframes return-bottom {
+    0% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes return-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(-50px);
+              transform: translateY(-50px);
+      opacity: 1;
+    }
+  }
+  
+header .banner-video .return-1 {
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    bottom:20px;
+    width: 50px;
+    height: 50px;
+    animation: return-bottom 1.5s infinite;
+}
+header .banner-video .return-1  img {
+    width: 100%;
+}
+/* 外部列表盒子 */
+.out-list {
+    width: 1900px;
+    height: 55px;
+    margin-left: 10px;
+    margin-top: 0px;
+}
+/* 外部盒子里面的li */
+.out-list li {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 55px;
+    margin-right: 30px;
+   
+}
+/* 使外部第三个和第四个li右浮动 */
+/* 导航栏外部盒子的第一个li下移300px*/
+.y-300 {
+    transform: translateY(300px);
+    background-color: transparent;
+}
+.out-list li:nth-child(2), .out-list li:nth-child(3), .out-list li:nth-child(4) {
+    margin-right: 0%;
+    margin-left: -130px;
+    float: right;
+}
+/* 导航栏文字 */
+.out-list li a {
+    display: inline-block;
+    width: 110px;
+    margin-left:100px;
+    height: 80px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 80px;
+    position: absolute;
+    z-index: 1;
+}
+/* 内部列表盒子 */
+.in-list {
+    width: 300px;
+    height: 100px;
+}
+.in-list a {
+    width: 100px;
+}
+/* 下拉内部列表动画过渡 */
+.in-box {
+    opacity: 0;
+    width: 300px;
+    height: 170px;
+    transform: translateY(-200px);
+}
+.out-list li:hover .in-box {
+    opacity: 1;
+    transform: translateY(70px);
+    transition: all 0.5s ease-out;
+}
+/* 经过导航栏外部列表的li ，里面的a */
+.out-list li:hover .cu {
+    background-color: #f7cbcd;
+    color: #ffffff;
+    font-weight: 600;
+    border-bottom: 6px #E99599 solid;
+}
+/* logo hover边框无 */
+/* 内部列表下拉下边框 */
+.out-list li:hover .in-box {
+    border-radius: 20px;
+}
+.out-list li:hover .in-box .in-list li a {
+    color: black;
+    border-bottom: 1px solid rgb(223, 223, 223) ;
+    background-color: white;
+    font-size: 14px;
+}
+/* 尾部部分 */
+footer {
+    position: relative;
+    width: 1920px;
+    height: 500px;
+    margin: auto;; 
+}
+/* 尾部logo盒子 */
+.footer-box {
+    position: absolute;
+    top: 50px;
+    left: 222px;
+    width: 1480px;
+    height: 400px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 50px rgba(10,16,20,.24),0 0 60px rgba(116, 130, 139, 0.12)
+}
+/* 装logo的盒子 */
+.logo-box {
+    float: left;
+    width: 580px;
+    height: 400px;
+}
+.logo-box-img {
+    margin-top: 140px;
+    margin-left: 25%;
+    width: 330px;
+    height: 115px;
+}
+.logo-box-img img {
+    width: 100%;
+}
+/* 右边的盒子 */
+.right-box {
+    float: right;
+    width: 875px;
+    height: 400px;
+}
+/* 版权信息盒子 */
+.copyright {
+    float: left;
+    width: 585px;
+    height: 380px;
+    
+    margin-top: 10px;
+}
+.copyright dl {
+    display: inline-block;
+    width: 200px;
+    height: 360px;
+    padding-top: 60px;
+}
+.copyright dl dd {
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.copyright dl dd a{
+    display: inline-block;
+    width: 150px;
+    border-bottom: 0.6px #ccc9c9 solid;
+    color:rgb(122, 122, 122);   
+
+    font-size: 20px;
+    font-weight: 530;
+    text-decoration: none;
+}
+/* 社交账号图标盒子 */
+.social {
+    float: right;
+    margin-top: 65px;
+    width: 380px;
+    height: 50px;
+}
+.social div {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
+    /* overflow: hidden; */
+}
+.social div:nth-child(2), .social div:nth-child(3), .social div:nth-child(4) {
+    margin-left:px;
+}
+.social div img {
+    width: 100%;
+    opacity: 0.7;
+}
+.social div:hover img {
+    opacity: 1;
+    transform: scale(1.1);
+    transition: all 0.3s ease-out;
+}
+/* 合作盒子 */
+.cooperation {
+    position: absolute;
+    left: 800px;
+    top: 140px;
+    width: 386px;
+    height: 50px;
+}
+.cooperation span {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+}
+/* 合作里面的a链接 */
+.cooperation a {
+    font-size: 15px;
+    color:rgb(122, 122, 122);  
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+}
+/* 合作链接里的第二个和第三个距离 */
+.cooperation span:nth-child(2), .cooperation span:nth-child(3) {
+    margin-left: 14px;
+}
+/* 都变大 */
+.footer-scale:hover {
+    transition: all 0.4s ease-out;
+    transform: scale(1.1);
+}
+/* 隐私协议 */
+.agreement {
+    position: absolute;
+    left: 800px;
+    top: 200px;
+    width: 387px;
+    height: 50px;
+}
+.agreement a {
+    color:rgb(122, 122, 122);
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+    line-height: 60px;
+}
+.agreement a span {
+    color:rgb(122, 122, 122);
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+}
+.agreement a span:nth-child(2) {
+}
+/* 备案信息 */
+.law {
+    position: absolute;
+    left: 800px;
+    top: 257px;
+    width: 387px;
+    height: 50px;
+    text-indent: 1em;
+    line-height: 60px;   
+    font-size: 13px;
+    color: rgb(122, 122, 122);
+    text-decoration: none;
+}
+/* 二维码盒子 */
+.QR-code {
+    float: right;
+    width: 290px;
+    height: 380px;
+    margin-top: 10px;
+}
+/* 装二维码的盒子 */
+.QR-code-img {
+    width: 190px;
+    height: 190px;
+    margin-left: 50px;
+    margin-top: 50px;
+    background-color: black;
+}
+.QR-code-img img {
+    width: 100%;
+}
+.QR-code h1 {
+    width: 230px;
+    height: 60px;
+    font-size: 20px;
+    margin-left: 30px;
+    margin-top: 10px;
+    text-align: center;
+}
